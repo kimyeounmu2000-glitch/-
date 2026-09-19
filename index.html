@@ -46,7 +46,7 @@
         padding: 6% 0px;  
       }
       #main-image{
-        background-image: url("main.jpg");
+        background-image: url("img/main.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         width: 70%;
@@ -61,6 +61,12 @@
         left: 16%;
         top: 46%;
       }
+
+      h4{       /*메인 사진 속 텍스트*/
+        font-size: 1.1rem;
+        font-weight: bolder;
+      }
+
 
       hr{
         width: 95%;
@@ -128,10 +134,8 @@
         opacity: 0.8;
       }
       
-      .qha{/*봄 사진        나중에 내리면 이미지가 커지거나 이미지가 움직이는 쪽으로 설정을 할것
-          봄과 여름의 간격이 너무 큼 이것도 줄여야함
-        */
-        background-image: url("qha.jpg");
+      .qha{/*봄 사진*/
+        background-image: url("img/qha.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0px auto;
@@ -140,7 +144,7 @@
         padding: 20%;
       }
         .si{/*여름 사진*/
-        background-image: url("dufma.jpg");
+        background-image: url("img/dufma.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: auto;
@@ -148,7 +152,7 @@
         height: 70vh;
       }
         .aut{/*가을 사진*/
-        background-image: url("leaves.png");
+        background-image: url("img/leaves.png");
         background-size: cover;
         background-repeat: no-repeat;
         margin: auto;
@@ -156,7 +160,7 @@
         height: 70vh;
       }
         .win{/*겨울 사진*/
-        background-image: url("rudnf.jpg");
+        background-image: url("img/rudnf.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         margin: auto;
@@ -172,20 +176,23 @@
 
 /*--------------------------------------향수 지속---------------------------------------*/      
       .long{
-        /*border: 3px solid black;*/
+        border: 3px solid black;
         display: flex;
         width: 80%;
-        margin: 5% auto;
+        margin: 2% auto;
         justify-content: space-between;
         flex-direction: column;
-        padding: 5%;
+        padding-bottom: 3%;
       }
+
+
       h4{font-size: 1.1rem;
         font-weight: bolder;
       }
-      
-        .smell{
+
+        .smell{           /*2번째 챕터 제목*/
           font-size: 2em;
+          padding-top: 10%;
         }
 
 
@@ -193,33 +200,36 @@
         height: 40vh;
         /*border: 3px solid pink;*/
         line-height: 3;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
-        gap: 20%;
         }
 
         .pu:nth-child(2),        
         .pu:nth-child(4){
-          flex-direction: row-reverse;
           text-align: left;
-        }
-
-        
+        }       
         .pu:nth-child(1),        
         .pu:nth-child(3){
           text-align: right;
         }
+          
 
-        .smell{
-          padding-top: 5%;
+        .pu:nth-child(2) .num,        
+        .pu:nth-child(4) .num{
+          order: 1;
+        }        
+        .pu:nth-child(2) .par,        
+        .pu:nth-child(4) .par{
+          order: 2;
         }
 
 
-        .num{font-size:12em;
-            text-align: center;
+
+        .num{font-size:12em;      /*부향률 숫자 조절*/
+            justify-content: center;
             display: flex;
             align-items: center;
-
       }
 
 
@@ -263,7 +273,7 @@
   <body>
     <header>
       <div class="logo">
-        <a href="#"><img src="logo.svg" alt="사진"></a>
+        <a href="#"><img src="img/logo.svg" alt="사진"></a>
       </div>
       <nav>
         <a href="#">ABOUT</a>
@@ -338,7 +348,7 @@
               적은 양으로도 짙게 남는, 가장 응축된 향의 형태입니다.
             </p>
           </div>
-          <div class="num">01</div>
+          <div class="num">6H+</div>
         </div>
         <div class="pu">
           <div class="par">
@@ -348,7 +358,7 @@
                 진하기와 지속력의 균형이 좋아 가장 널리 사랑받는 농도입니다.
               </p>
           </div>
-          <div class="num">02</div>
+          <div class="num">5H~7H</div>
         </div>
         <div class="pu">
           <div class="par">
@@ -358,7 +368,7 @@
               일상에서 자주 사용하는 향수 형태로, 가볍고 상쾌한 향이 특징입니다.
             </p>
           </div>
-          <div class="num">03</div>
+          <div class="num">2H~4H</div>
         </div>
         <div class="pu">
           <div class="par">
@@ -368,7 +378,7 @@
               가장 가볍고 상쾌한 향수 형태로, 주로 여름철에 사용됩니다.
             </p>
           </div>
-          <div class="num">04</div>
+          <div class="num">1H~2H</div>
         </div>
       </div>
     </main>
@@ -376,7 +386,7 @@
       <div>
         <h3>&lt;잊지 말아요, 나라는 향기&gt;</h3>
         <div class="foot">
-            <img src="myo.jpg" alt="포트폴리오 이미지">
+            <img src="img/myo.jpg" alt="포트폴리오 이미지">
             <p> 
               물망초의 꽃말처럼, 향수는 예로부터 "나를 잊지 말아줘"라는 마음을 담아 건네는 선물이었습니다.<br>
               함께한 시간이 지나 각자의 자리로 돌아간 뒤에도, 어디선가 우연히 그 향을 스치는 순간이 옵니다.<br>
